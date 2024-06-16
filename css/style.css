@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "Devil Breeze";
+    src: url("/font/Devil Breeze Demi.ttf");
+}
+:root{
+    --PRIMARY-COLOR: #0A2239;
+    --SECONDARY-COLOR: #1C3A5A;
+    --HEGHLIGHT-COLOR:#3E92CC;
+    --TEXT-COLOR: #FFF;
+    --SHADOW-COLOR: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3em;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 5em;
+    background-color: var(--PRIMARY-COLOR);
+}
+h1{
+    position: absolute;
+    width: 100%;
+    font-family: "Devil Breeze";
+    font-size: 2em;
+    color: var(--TEXT-COLOR);
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0.05em 0.05em 0.05em var(--SHADOW-COLOR);
+}
+@media (min-width:600px){
+    header{
+        height: 7.5em;
+    }
+    h1{
+        font-size: 3em;
+    }
+}
+@media (min-width:768px){
+    header{
+        height: 10em;
+    }
+    h1{
+        font-size: 4em;
+    }
+}
+@media (min-width:992px){
+    header{
+        height: 15em;
+    }
+    h1{
+        font-size: 6em;
+    }
+}
+
+/* NAV MENU */
+nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    background-color: var(--SECONDARY-COLOR);
+}
+a{
+    text-decoration: none;
+}
+/* MAIN MENU */
+.navmenu{
+    display: flex;
+    list-style: none;
+}
+.navmenu li{
+    position: relative;
+}
+.navmenu a{
+    display: block;
+    padding: 1rem;
+    color: var(--TEXT-COLOR);
+}
+.navmenu a:hover{
+    background-color: var(--HEGHLIGHT-COLOR);
+}
+.search{
+    margin-left: auto;
+}
+/* SUB MENU */
+.dropdown-content{
+    position: absolute;
+    display: none;
+    min-width: 9em;
+    z-index: 1;
+    list-style: none;
+    background-color: var(--SECONDARY-COLOR);
+}
+.dropdown-content li{
+    border-top: 1px solid var(--HEGHLIGHT-COLOR);
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+@media (max-width:768px){
+    .navmenu a{
+        padding: 1rem 0.5rem;
+    }
+}
+/* MAIN */
+/* HISTORIA */
+.historia{
+    display: grid;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.historia img{
+    width: 100%;
+    height: auto;
+}
+.historia-content{
+    width: 100%;
+    text-align: justify;
+    padding: 1em;
+}
+h2{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+
+
+@media (min-width:600px){
+    /* HISTORIA */
+    .historia{
+        display: flex;
+    }
+    .historia img{
+        flex: 0 0 40%;
+    }
+    .historia-content{
+        flex: 0 0 60%;
+    }
+    .historia-content h2{
+        text-align: left;
+    }
+    /* CONTACTO */
+}
+
+
+
+
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    background-color: var(--SECONDARY-COLOR);
+}
+footer a{
+    padding: 1rem;
+    color: var(--TEXT-COLOR);
+}
+footer a:hover{
+    color: var(--HEGHLIGHT-COLOR);
+}
